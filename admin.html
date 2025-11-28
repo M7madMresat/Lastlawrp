@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Last Law RP | لوحة التحكم</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="animated-bg"></div>
+
+<header class="navbar">
+    <div class="nav-inner">
+        <div class="nav-left">
+            <img src="images/ll.png" alt="Last Law Logo" />
+            <div class="nav-title"
+                 data-ar="لوحة تحكم Last Law" data-en="Last Law Dashboard">
+                لوحة تحكم Last Law
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="stats.html" data-ar="إحصائيات" data-en="Stats">إحصائيات</a>
+            <a href="auth.html" data-ar="التقديم" data-en="Apply">التقديم</a>
+            <a href="admin.html" data-ar="لوحة التحكم" data-en="Dashboard">لوحة التحكم</a>
+        </nav>
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="ar">عربي</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section>
+        <h2 class="section-title" data-ar="إعدادات عامة" data-en="General Settings">
+            إعدادات عامة
+        </h2>
+        <p class="section-desc"
+           data-ar="هذه الإعدادات تحفظ في المتصفح (localStorage) وتظهر في الصفحة الرئيسية."
+           data-en="These settings are saved in localStorage and used on the homepage.">
+            هذه الإعدادات تحفظ في المتصفح (localStorage) وتظهر في الصفحة الرئيسية.
+        </p>
+
+        <form onsubmit="event.preventDefault(); handleAdminSaveSettings();">
+            <div class="form-row">
+                <label data-ar="نص حالة السيرفر" data-en="Server status text">
+                    نص حالة السيرفر
+                </label>
+                <input type="text" id="admin-status-input"
+                       placeholder="Online - Stable / السيرفر شغال" />
+            </div>
+            <div class="form-row">
+                <label data-ar="نص إعلان رئيسي" data-en="Main announcement text">
+                    نص إعلان رئيسي
+                </label>
+                <textarea id="admin-ann-input"
+                          placeholder="اكتب إعلان يظهر في الصفحة الرئيسية"></textarea>
+            </div>
+            <button class="btn btn-main" type="submit"
+                    data-ar="حفظ الإعدادات" data-en="Save settings">حفظ الإعدادات</button>
+            <div id="admin-msg" style="margin-top:8px;font-size:13px;color:var(--text-muted);"></div>
+        </form>
+    </section>
+
+    <section>
+        <h2 class="section-title" data-ar="إحصائيات من QBCore (تجريبية)"
+            data-en="QBCore Stats (Demo)">
+            إحصائيات من QBCore (تجريبية)
+        </h2>
+        <p class="section-desc"
+           data-ar="يمكنك استخدام نفس بيانات الإحصائيات هنا لمراجعة اللاعبين (حالياً داتا تجريبية)."
+           data-en="Use the same stats data here to review players (demo data for now).">
+            يمكنك استخدام نفس بيانات الإحصائيات هنا لمراجعة اللاعبين (حالياً داتا تجريبية).
+        </p>
+
+        <div class="card">
+            <button class="btn btn-main"
+                    onclick="loadPlayers('admin-players-table','admin-stats-status')"
+                    data-ar="تحديث بيانات اللاعبين" data-en="Refresh player data">
+                تحديث بيانات اللاعبين
+            </button>
+            <div id="admin-stats-status"
+                 style="margin-top:8px;font-size:13px;color:var(--text-muted);"></div>
+
+            <div style="margin-top:15px;overflow-x:auto;">
+                <table id="admin-players-table">
+                    <thead>
+                    <tr>
+                        <th data-ar="ID اللاعب" data-en="Citizen ID">ID اللاعب</th>
+                        <th data-ar="الاسم" data-en="Name">الاسم</th>
+                        <th data-ar="المال" data-en="Money">المال</th>
+                        <th data-ar="الوظيفة" data-en="Job">الوظيفة</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © <span id="year"></span> Last Law RP – All Rights Reserved.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

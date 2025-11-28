@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Last Law RP | الرئيسية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="animated-bg"></div>
+
+<header class="navbar">
+    <div class="nav-inner">
+        <div class="nav-left">
+            <img src="images/ll.png" alt="Last Law Logo" />
+            <div>
+                <div class="nav-title" data-ar="Last Law RP" data-en="Last Law RP">Last Law RP</div>
+                <div style="font-size:11px;color:#999;"
+                     data-ar="مدينة رول بلاي عربية" data-en="Arabic Roleplay City">
+                    مدينة رول بلاي عربية
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="stats.html" data-ar="إحصائيات" data-en="Stats">إحصائيات</a>
+            <a href="auth.html" data-ar="التقديم" data-en="Apply">التقديم</a>
+            <a href="admin.html" data-ar="لوحة التحكم" data-en="Dashboard">لوحة التحكم</a>
+        </nav>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="ar">عربي</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <img src="images/ll.png" class="hero-logo" alt="Last Law Logo" />
+        <h1 class="hero-title"
+            data-ar="مرحباً بك في <span>Last Law</span>"
+            data-en="Welcome to <span>Last Law</span>">
+            مرحباً بك في <span>Last Law</span>
+        </h1>
+        <p class="hero-sub"
+           data-ar="سيرفر رول بلاي عربي بنظام اقتصاد واقعي، شرطة وعصابات وفعاليات مستمرة."
+           data-en="An Arabic roleplay server with realistic economy, police & gang systems, and weekly events.">
+            سيرفر رول بلاي عربي بنظام اقتصاد واقعي، شرطة وعصابات وفعاليات مستمرة.
+        </p>
+
+        <p style="font-size:13px;color:var(--text-muted);">
+            <span data-ar="حالة السيرفر:" data-en="Server Status:">حالة السيرفر:</span>
+            <strong id="server-status-text"></strong>
+        </p>
+
+        <div class="hero-buttons">
+            <a href="auth.html#whitelist" class="btn btn-main"
+               data-ar="🚓 قدم دخول للمدينة" data-en="🚓 Apply for Whitelist">
+                🚓 قدم دخول للمدينة
+            </a>
+            <a href="stats.html" class="btn btn-outline"
+               data-ar="📊 عرض إحصائيات اللاعبين" data-en="📊 View player stats">
+                📊 عرض إحصائيات اللاعبين
+            </a>
+        </div>
+
+        <div class="announcement">
+            <strong data-ar="إعلان:" data-en="Announcement:">إعلان:</strong>
+            <span id="announcement-text"></span>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title" data-ar="عن السيرفر" data-en="About the Server">عن السيرفر</h2>
+        <p class="section-desc"
+           data-ar="Last Law مدينة رول بلاي مبنية على QBCore، تهدف لتقديم تجربة احترافية للاعبين العرب بقوانين واضحة وإدارة متواجدة دائماً."
+           data-en="Last Law is a QBCore-based RP city for Arabic players with clear rules and active staff.">
+            Last Law مدينة رول بلاي مبنية على QBCore، تهدف لتقديم تجربة احترافية للاعبين العرب بقوانين واضحة وإدارة متواجدة دائماً.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3 data-ar="إدارة محترفة" data-en="Professional Staff">إدارة محترفة</h3>
+                <p data-ar="طاقم إداري متفاعل لحل المشاكل وتنظيم الفعاليات وتطوير المدينة."
+                   data-en="Active staff to manage reports, run events, and improve the city.">
+                    طاقم إداري متفاعل لحل المشاكل وتنظيم الفعاليات وتطوير المدينة.
+                </p>
+            </div>
+            <div class="card">
+                <h3 data-ar="اقتصاد واقعي" data-en="Realistic Economy">اقتصاد واقعي</h3>
+                <p data-ar="رواتب، وظائف، تجارة، عصابات، ومخاطر محسوبة تجعل اللعب ممتعاً ومتوازناً."
+                   data-en="Jobs, salaries, trading, gangs and balanced risk/reward.">
+                    رواتب، وظائف، تجارة، عصابات، ومخاطر محسوبة تجعل اللعب ممتعاً ومتوازناً.
+                </p>
+            </div>
+            <div class="card">
+                <h3 data-ar="فعاليات" data-en="Events">فعاليات</h3>
+                <p data-ar="سباقات، تحديات، جوائز كاش وسيارات نادرة أسبوعية."
+                   data-en="Races, challenges, cash prizes and rare cars weekly.">
+                    سباقات، تحديات، جوائز كاش وسيارات نادرة أسبوعية.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © <span id="year"></span> Last Law RP – All Rights Reserved.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

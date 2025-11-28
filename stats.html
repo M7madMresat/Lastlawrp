@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Last Law RP | إحصائيات اللاعبين</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="animated-bg"></div>
+
+<header class="navbar">
+    <div class="nav-inner">
+        <div class="nav-left">
+            <img src="images/ll.png" alt="Last Law Logo" />
+            <div class="nav-title" data-ar="Last Law RP" data-en="Last Law RP">Last Law RP</div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="stats.html" data-ar="إحصائيات" data-en="Stats">إحصائيات</a>
+            <a href="auth.html" data-ar="التقديم" data-en="Apply">التقديم</a>
+            <a href="admin.html" data-ar="لوحة التحكم" data-en="Dashboard">لوحة التحكم</a>
+        </nav>
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="ar">عربي</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section>
+        <h2 class="section-title" data-ar="إحصائيات اللاعبين" data-en="Player Statistics">
+            إحصائيات اللاعبين
+        </h2>
+        <p class="section-desc"
+           data-ar="هذا الجدول يعرض بيانات تجريبية الآن، ويمكن ربطه لاحقاً بقاعدة بيانات QBCore."
+           data-en="This table shows demo data for now. Later you can connect it to your QBCore DB.">
+            هذا الجدول يعرض بيانات تجريبية الآن، ويمكن ربطه لاحقاً بقاعدة بيانات QBCore.
+        </p>
+
+        <div class="card">
+            <button class="btn btn-main"
+                    onclick="loadPlayers('players-table','stats-status')"
+                    data-ar="تحديث الإحصائيات" data-en="Refresh Stats">
+                تحديث الإحصائيات
+            </button>
+
+            <div style="margin-top:10px;max-width:300px;">
+                <label data-ar="بحث عن لاعب" data-en="Search player">بحث عن لاعب</label>
+                <input type="text" id="player-search"
+                       oninput="searchPlayers('players-table','player-search')"
+                       placeholder="Search / بحث" />
+            </div>
+
+            <div id="stats-status" style="margin-top:8px;font-size:13px;color:var(--text-muted);"></div>
+
+            <div style="margin-top:15px;overflow-x:auto;">
+                <table id="players-table">
+                    <thead>
+                    <tr>
+                        <th data-ar="ID اللاعب" data-en="Citizen ID">ID اللاعب</th>
+                        <th data-ar="الاسم" data-en="Name">الاسم</th>
+                        <th data-ar="المال" data-en="Money">المال</th>
+                        <th data-ar="الوظيفة" data-en="Job">الوظيفة</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- يتم تعبئة الصفوف من main.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © <span id="year"></span> Last Law RP – All Rights Reserved.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

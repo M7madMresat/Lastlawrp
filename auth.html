@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Last Law RP | التقديم</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="animated-bg"></div>
+
+<header class="navbar">
+    <div class="nav-inner">
+        <div class="nav-left">
+            <img src="images/ll.png" alt="Last Law Logo" />
+            <div class="nav-title" data-ar="Last Law RP" data-en="Last Law RP">Last Law RP</div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="stats.html" data-ar="إحصائيات" data-en="Stats">إحصائيات</a>
+            <a href="auth.html" data-ar="التقديم" data-en="Apply">التقديم</a>
+            <a href="admin.html" data-ar="لوحة التحكم" data-en="Dashboard">لوحة التحكم</a>
+        </nav>
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="ar">عربي</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Login -->
+    <section id="login">
+        <h2 class="section-title" data-ar="تسجيل الدخول (طاقم)" data-en="Staff Login">
+            تسجيل الدخول (طاقم)
+        </h2>
+        <p class="section-desc"
+           data-ar="نموذج بسيط لطاقم الإدارة / الشرطة، يمكنك ربطه لاحقاً بـ Back-End."
+           data-en="Simple login form for staff/PD. Connect it to a backend later.">
+            نموذج بسيط لطاقم الإدارة / الشرطة، يمكنك ربطه لاحقاً بـ Back-End.
+        </p>
+        <form onsubmit="event.preventDefault(); alert(currentLang==='ar' ? 'نموذج تجريبي فقط.' : 'Demo only.');">
+            <div class="form-row">
+                <label data-ar="اسم المستخدم" data-en="Username">اسم المستخدم</label>
+                <input type="text" required />
+            </div>
+            <div class="form-row">
+                <label data-ar="كلمة المرور" data-en="Password">كلمة المرور</label>
+                <input type="password" required />
+            </div>
+            <button type="submit" class="btn btn-main"
+                    data-ar="دخول" data-en="Login">دخول</button>
+        </form>
+    </section>
+
+    <!-- Police Application -->
+    <section id="police">
+        <h2 class="section-title" data-ar="تقديم على الشرطة" data-en="Police Application">
+            تقديم على الشرطة
+        </h2>
+        <p class="section-desc"
+           data-ar="املأ النموذج وسيتم مراجعة طلبك من قبل إدارة السيرفر."
+           data-en="Fill this form, the staff will review your police application.">
+            املأ النموذج وسيتم مراجعة طلبك من قبل إدارة السيرفر.
+        </p>
+
+        <form onsubmit="event.preventDefault(); alert(currentLang==='ar' ? 'تم إرسال طلب الشرطة (تجريبي).' : 'Police application sent (demo).');">
+            <div class="form-row">
+                <label data-ar="اسمك في الديسكورد" data-en="Discord name">اسمك في الديسكورد</label>
+                <input type="text" required />
+            </div>
+            <div class="form-row">
+                <label data-ar="اسمك في اللعبة" data-en="In-game name">اسمك في اللعبة</label>
+                <input type="text" required />
+            </div>
+            <div class="form-row">
+                <label data-ar="العمر الحقيقي" data-en="Real age">العمر الحقيقي</label>
+                <input type="number" min="10" required />
+            </div>
+            <div class="form-row">
+                <label data-ar="خبرتك في الرول بلاي والشرطة" data-en="RP / PD experience">
+                    خبرتك في الرول بلاي والشرطة
+                </label>
+                <textarea required></textarea>
+            </div>
+            <button class="btn btn-main" type="submit"
+                    data-ar="إرسال الطلب" data-en="Submit Application">إرسال الطلب</button>
+        </form>
+    </section>
+
+    <!-- Whitelist -->
+    <section id="whitelist">
+        <h2 class="section-title" data-ar="طلب دخول Whitelist" data-en="Whitelist Application">
+            طلب دخول Whitelist
+        </h2>
+        <p class="section-desc"
+           data-ar="هذا النموذج لدخول المدينة. يمكن لاحقاً ربطه ببوت ديسكورد."
+           data-en="Use this form to request access. Later you can send it to a Discord bot.">
+            هذا النموذج لدخول المدينة. يمكن لاحقاً ربطه ببوت ديسكورد.
+        </p>
+
+        <form onsubmit="event.preventDefault(); alert(currentLang==='ar' ? 'تم إرسال طلب الـ Whitelist (تجريبي).' : 'Whitelist request sent (demo).');">
+            <div class="form-row">
+                <label data-ar="اسم الديسكورد + ID" data-en="Discord name + ID">
+                    اسم الديسكورد + ID
+                </label>
+                <input type="text" required />
+            </div>
+            <div class="form-row">
+                <label data-ar="العمر" data-en="Age">العمر</label>
+                <input type="number" required />
+            </div>
+            <div class="form-row">
+                <label data-ar="خبرتك في الرول بلاي" data-en="RP experience">خبرتك في الرول بلاي</label>
+                <textarea required></textarea>
+            </div>
+            <div class="form-row">
+                <label data-ar="لماذا نختارك؟" data-en="Why should we pick you?">
+                    لماذا نختارك؟
+                </label>
+                <textarea required></textarea>
+            </div>
+            <button class="btn btn-main" type="submit"
+                    data-ar="إرسال الطلب" data-en="Submit Application">إرسال الطلب</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    © <span id="year"></span> Last Law RP – All Rights Reserved.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
